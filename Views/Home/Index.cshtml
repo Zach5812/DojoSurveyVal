@@ -1,0 +1,30 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div style="text-align: center;">
+<form asp-controller="Home" asp-action="addStudent" method="POST">
+    <div>
+        <span asp-validation-for="Name"></span>
+        <label asp-for="Name"></label>
+        <input asp-for="Name">
+        <span asp-validation-for="Location"></span>
+        <label asp-for="Location"></label>
+        <select asp-for="Location" id="">
+            <option value="San Jose">San Jose</option>
+            <option value="Texas">Texas</option>
+        </select>
+        <span asp-validation-for="Language"></span>
+        <label asp-for="Language"></label>
+        <select asp-for="Language" id="">
+            <option value="C#">C#</option>
+            <option value="Java">Java</option>
+        </select>
+        <span asp-validation-for="Comment"></span>
+        <label asp-for="Comment"></label>
+        <input asp-for="Comment">
+        <button type="submit">Submit</button>
+    </div>
+</form>
+</div>

@@ -1,0 +1,15 @@
+@model Student
+<div style="text-align: center;">
+    <h1>Submitted Info</h1>
+    <p>Name : @Model.Name</p>
+    <p>Dojo Location : @Model.Location</p>
+    <p>Favorite Language : @Model.Language</p>
+    @if (Model.Comment == null)
+    {
+        <p>Comment: No Comments</p>
+    }
+    else
+    {
+        <p>Comment : @Model.Comment</p>
+    }
+</div>
